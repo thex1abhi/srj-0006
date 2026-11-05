@@ -5,29 +5,14 @@ import Home from './Components/Home'
 import Courses from './Components/Courses'
 import AdmissionForm from './Components/AdmissionForm'
 import axios from 'axios'
+import About from './Components/About'
 
 
 export const ServerUrl = import.meta.env.VITE_SERVER_URL;
 
 function App() {
 
-  const [user, setUser] = useState(null);
 
-  useEffect(() => {
-
-    const fetchMe = async () => {
-      try {
-        const res = await axios.get(ServerUrl + "/api/user/current-user", { withCredentials: true })
-
-        setUser(res.data)
-        console.log(res.data);
-
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    fetchMe()
-  }, []);
 
   return (
     <>
@@ -35,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/about" element={<About />} />
         <Route path="/admission" element={<AdmissionForm />} />
       </Routes>
 
