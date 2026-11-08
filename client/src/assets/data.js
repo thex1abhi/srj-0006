@@ -4,12 +4,9 @@ export const COLLEGE = {
     phone: "99708 80809",
     phoneLink: "+919970880809",
     email: "stjohnsupport@gmail.com",
+    address: " 348 Dr. Dadabhai Naoroji Road, Fort, Mumbai, Maharashtra 400001 "
 };
- 
 
-
-
-// Fees are per year in Indian Rupees. Edit these to match your official fee structure.
 export const COURSES = [
     { id: "bsc-cs", name: "B.Sc. Computer Science", stream: "Science", duration: "3 years", eligibility: "12th Science (PCM / PCB) with 50% marks", seats: 60, fee: 45000 },
     { id: "bsc-phy", name: "B.Sc. Physics", stream: "Science", duration: "3 years", eligibility: "12th Science with Physics and Mathematics", seats: 40, fee: 38000 },

@@ -1,9 +1,9 @@
 
 import express from "express"
 import dotenv from "dotenv"
-import connectDB from "./configs/connectDB.js"
 import cors from "cors"
 import cookieParser from "cookie-parser"
+import chatRouter from "./routes/chat.route.js"
 
 dotenv.config()
 
@@ -22,9 +22,9 @@ app.get("/", (req, res) => {
     res.json(`Hello from server `)
 })
 
+app.use("/api/chat", chatRouter)
 
 app.listen(PORT, () => {
     console.log(`Server started on ${PORT}`);
-    connectDB()
 })
 

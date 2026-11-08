@@ -8,7 +8,7 @@ export default function Footer() {
         <div>
           <h3 className="font-serif text-xl text-white">{COLLEGE.name}</h3>
           <p className="mt-3 max-w-xs text-sm leading-relaxed">
-            Address: 348 Dr. Dadabhai Naoroji Road, Fort, Mumbai, Maharashtra 400001
+          Address :  {COLLEGE.address}
           </p>
         </div>
         <div>

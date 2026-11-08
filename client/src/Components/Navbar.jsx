@@ -26,7 +26,7 @@ export default function Navbar() {
           </span>
           <span className="font-serif text-lg leading-tight text-white">
             {COLLEGE.short}
-            <span className="block font-sans text-xs text-slate-300">Science, Commerce and Arts</span>
+            <span className="block font-sans text-xs text-slate-300">Arts, Science and  Commerce </span>
           </span>
         </Link>
 
