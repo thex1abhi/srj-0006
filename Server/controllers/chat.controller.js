@@ -11,7 +11,7 @@ export const askChatbot = async (req, res) => {
     try {
         const { message } = req.body;
 
-        if (!message || !message.trim()) {
+        if (typeof message !== "string" || !message.trim()) {
             return res.status(400).json({ message: "Message is required" });
         }
 
@@ -59,13 +59,14 @@ ${message.trim()}
 `;
 
         const response = await ai.models.generateContent({
-            model: "gemini-3.6-flash",
+            model: "gemini-3.5-flash-lite",
             contents: message.trim(),
             config: { systemInstruction: systemPrompt },
         });
         return res.status(200).json({ message: `${response?.text}`, })
 
     } catch (error) {
+        console.error("Chatbot request failed:", error);
         return res.status(500).json({ message: "ChatBot error" });
     }
 };
