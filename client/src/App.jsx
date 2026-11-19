@@ -8,7 +8,7 @@ import About from './Components/About'
 import ChatBot from './Components/ChatBot'
 
 
-export const ServerUrl = "http://localhost:8000";
+export const ServerUrl = "https://srj-0006.onrender.com";
 
 // this function solves the tab not opening on the top error 
 function ScrollToTop() {
